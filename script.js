@@ -1,34 +1,15 @@
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-    });
-});
+document.addEventListener("DOMContentLoaded", function() {
+    const nameElement = document.getElementById("searchText");
+    const name = "Samantha Martinez"; // Your name or any text you want to animate
+    let index = 0;
 
-// Typing Effect for Headline
-const words = ["Web Developer", "Designer", "Creative Thinker"];
-let i = 0;
-let j = 0;
-let currentWord = "";
-let isDeleting = false;
-
-function typeEffect() {
-    currentWord = words[i];
-    document.querySelector("h1").textContent = `Hi, I'm Samantha - ${currentWord.substring(0, j)}`;
-
-    if (!isDeleting && j < currentWord.length) {
-        j++;
-        setTimeout(typeEffect, 100);
-    } else if (isDeleting && j > 0) {
-        j--;
-        setTimeout(typeEffect, 50);
-    } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) i = (i + 1) % words.length;
-        setTimeout(typeEffect, 1000);
+    function typeName() {
+        if (index < name.length) {
+            nameElement.textContent += name[index];
+            index++;
+            setTimeout(typeName, 150); // Adjust typing speed
+        }
     }
-}
 
-typeEffect();
+    typeName();
+});

@@ -5,42 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <!-- Add Font Awesome for the magnifying glass -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Hi, I'm Samantha</h1>
-        <p>Web Developer | Designer | Creator</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate web developer who loves to create stunning websites.</p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-card">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h3>Project Title</h3>
-            <p>Description of the project.</p>
+        <div class="search-container">
+            <!-- Font Awesome Magnifying Glass Icon -->
+            <i class="fas fa-search search-icon"></i>
+            <span class="search-text" id="searchText"></span>
+            <span class="cursor">|</span>
         </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Let's work together! Email me at <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    </section>
+    </header>
+    <div class="container">
+        <div class="about-wrapper">
+          <a href="#about">
+            <img src="images/totoro.jpg" alt="About Me" class="about-link-image">
+          </a>
+      
+          <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a Web Developer, Designer, and Creative Thinker.</p>
+          </section>
+        </div>
+      
+        <section id="projects">
+          <h2>Projects</h2>
+          <p>Here are some of the projects I’ve worked on...</p>
+        </section>
+      </div>
+      
 
     <footer>
-        <p>© 2025 Samantha | Built with ❤️</p>
+        <p>&copy; 2025 Samantha Mtz. All Rights Reserved.</p>
     </footer>
+
+    <script defer src="script.js"></script>
 </body>
 </html>
