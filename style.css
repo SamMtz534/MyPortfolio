@@ -5,70 +5,65 @@ html, body {
     height: 100%;
 }
 
-
 /* Body and page layout */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
-    padding: 0px;
-    text-align: center; /* Center all content */
-    padding: 0px;
+    padding: 0;
+    text-align: center;
+
+    /* Rain background */
+    background-image: url('images/rain.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Search Bar Style */
 .search-container {
-    display: inline-flex; /* Keeps the icon and text in line */
+    display: inline-flex;
     align-items: center;
     font-size: 2rem;
     font-family: 'Press Start 2P', sans-serif; 
-    border: 3px solid #444; /* Darker outline */
+    border: 3px solid #444;
     padding: 10px 15px;
     border-radius: 25px;
-    width: 50vw; /* Adjust width to make the search bar longer */
+    width: 50vw;
     background-color: #f8f8f8;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     justify-content: center;
     position: relative;
 }
 
-/* Font Awesome magnifying glass styling */
 .search-icon {
-    font-size: 1.5rem; /* Adjust size of magnifying glass */
-    color: black; /* Black color for the icon */
-    margin-right: 5px; /* Small margin between the icon and text */
-    
+    font-size: 1.5rem;
+    color: black;
+    margin-right: 5px;
 }
 
-/* Text in the search bar */
 .search-text {
     color: #333;
     white-space: nowrap;
     overflow: hidden;
-    flex-grow: 1; /* Make the text container take up the remaining space */
+    flex-grow: 1;
     display: inline-block;
 }
 
-/* Cursor animation */
 .cursor {
     animation: blink 0.7s infinite;
     color: black;
     position: absolute;
-    right: 0; /* Position the cursor right after the name */
+    right: 0;
     bottom: 10px;
 }
 
 @keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    50% { opacity: 0; }
 }
 
-/* Sections */
-section {
-    margin-bottom: 40px;
-}
-
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -76,160 +71,64 @@ footer {
     color: white;
 }
 
-/* Hover effect for links */
-a:hover {
-    text-decoration: underline;
-}
-
-/* === ADDED FOR IMAGE & LAYOUT === */
+/* Layout for images */
 .container {
     display: flex;
-    align-items: flex-start;      /* <-- Change this from center to flex-start */
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 40px;
     flex-wrap: wrap;
-    padding-left: 60px;
-    min-height: auto;             /* <-- Change from 100vh to auto or remove */
+    padding-left: 40px;
     margin-top: 0; 
     padding-top: 100px;
 }
 
-
-
+/* Remove rectangle background */
 .about-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* center About Me text below image */
-    gap: 10px;              /* small gap between image and text */
-    margin-left: 120px;     /* shift right — same as image margin-left */
-    margin-top: 40;          /* no extra top margin to keep image up */
-    /* Reset some default styles */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-
-/* Body and page layout */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    padding: 0px;
-    text-align: center; /* Center all content */
-    padding: 0;
-}
-
-/* Search Bar Style */
-.search-container {
-    display: inline-flex; /* Keeps the icon and text in line */
     align-items: center;
-    font-size: 2rem;
-    font-family: 'Press Start 2P', sans-serif; 
-    border: 3px solid #444; /* Darker outline */
-    padding: 10px 15px;
-    border-radius: 25px;
-    width: 50vw; /* Adjust width to make the search bar longer */
-    background-color: #f8f8f8;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    position: relative;
+    margin-left: 220px;
+    margin-top: 40px;
 }
 
-/* Font Awesome magnifying glass styling */
-.search-icon {
-    font-size: 1.5rem; /* Adjust size of magnifying glass */
-    color: black; /* Black color for the icon */
-    margin-right: 5px; /* Small margin between the icon and text */
-    
-}
-
-/* Text in the search bar */
-.search-text {
-    color: #333;
-    white-space: nowrap;
-    overflow: hidden;
-    flex-grow: 1; /* Make the text container take up the remaining space */
-    display: inline-block;
-}
-
-/* Cursor animation */
-.cursor {
-    animation: blink 0.7s infinite;
-    color: black;
-    position: absolute;
-    right: 0; /* Position the cursor right after the name */
-    bottom: 10px;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-/* Sections */
-section {
-    margin-bottom: 40px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
+/* Text under each image */
+.about-wrapper h2 {
+    margin-left: -100px;
+    text-align: left;
     color: white;
 }
 
-/* Hover effect for links */
-a:hover {
-    text-decoration: underline;
-}
-
-/* === ADDED FOR IMAGE & LAYOUT === */
-.container {
-    display: flex;
-    align-items: flex-start;      /* <-- Change this from center to flex-start */
-    justify-content: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding-left: 60px;
-    min-height: auto;             /* <-- Change from 100vh to auto or remove */
-    margin-top: 0; 
-    padding-top: 100;
-}
-
-
-
-.about-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* center About Me text below image */
-    gap: 10px;              /* small gap between image and text */
-    margin-left: 120px;     /* shift right — same as image margin-left */
-    margin-top: 40;          /* no extra top margin to keep image up */
-}
-
+/* Image styling */
 .about-link-image {
     width: 280px;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0;              /* remove any margin to prevent shifting */
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+    margin-left: -80px;
+    opacity: 1;
 }
 
-#about {
-    margin-left: 230px;
-}
-section {
-    max-width: 400px;
-    text-align: left;
-}
-
+/* 🔥 Hover effect directly on image */
+.about-link-image:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    filter: brightness(0.7); /* darkens the image */
 }
 
+/* Image sizing adjustments */
+.catbus-image {
+    width: 280px;
+    height: 248px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
 
-section {
-    max-width: 400px;
-    text-align: left;
+.socials-image {
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
 }
