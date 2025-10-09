@@ -126,9 +126,48 @@ footer {
 }
 
 .socials-image {
-    width: 280px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
+}
+/* Styling for the main content block on the About Me page */
+.about-content-box {
+    /* Retain your desired color and opacity */
+    background-color: rgba(32, 49, 32, 0.705); 
+    
+    /* -------------------------------------------------------------------- */
+    /* KEY CHANGE: Increase vertical padding (first value) significantly */
+    padding: 100px 40px; /* Increased top/bottom padding to 250px */
+    /* -------------------------------------------------------------------- */
+    
+    /* Retain your desired width */
+    max-width: 900px; 
+    
+    /* Round the corners */
+    border-radius: 10px; 
+    
+    /* Center the box on the page */
+    margin: 40px auto; 
+    
+    /* Optional: Add a subtle shadow for depth */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.233);
+}
+
+/* Styling for the new profile picture */
+.profile-pic {
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    
+    /* NEW/ADJUSTED: This is the key property */
+    object-position: center top; /* Tries to keep the top center of the image visible */
+    /* OR */
+    /* object-position: 50% 10%; */ /* Example: 50% from left, 10% from top */
+    /* You might need to experiment with these values */
+    
+    margin: 0 auto 50px auto; 
+    display: block; 
 }
