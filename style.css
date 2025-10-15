@@ -127,11 +127,12 @@ footer {
 
 .socials-image {
     width: 400px;
-    height: 400px;
+    height: 255px;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
 }
+
 /* Styling for the main content block on the About Me page */
 .about-content-box {
     /* Retain your desired color and opacity */
@@ -139,7 +140,7 @@ footer {
     
     /* -------------------------------------------------------------------- */
     /* KEY CHANGE: Increase vertical padding (first value) significantly */
-    padding: 100px 40px; /* Increased top/bottom padding to 250px */
+    padding: 100px 40px; 
     /* -------------------------------------------------------------------- */
     
     /* Retain your desired width */
@@ -153,6 +154,18 @@ footer {
     
     /* Optional: Add a subtle shadow for depth */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.233);
+    
+    /* Add this line to make the box the positioning reference */
+    position: relative;
+}
+
+/* Styling for the new Soot Sprite GIF */
+.soot-sprite-gif {
+    position: absolute;
+    width: 450px; /* Adjust the size as needed */
+    height: auto;
+    bottom: 10px; /* Distance from the bottom edge of the green square */
+    right: 190px;  /* Distance from the right edge of the green square */
 }
 
 /* Styling for the new profile picture */
@@ -161,13 +174,67 @@ footer {
     height: 250px;
     border-radius: 50%; 
     object-fit: cover; 
-    
-    /* NEW/ADJUSTED: This is the key property */
-    object-position: center top; /* Tries to keep the top center of the image visible */
-    /* OR */
-    /* object-position: 50% 10%; */ /* Example: 50% from left, 10% from top */
-    /* You might need to experiment with these values */
-    
+    object-position: center top; 
     margin: 0 auto 50px auto; 
     display: block; 
+}
+
+
+/* === NEW PROJECT CARD STYLES === */
+
+.project-card {
+    /* Use a lighter green alpha for better visibility against the background */
+    background-color: rgba(0, 150, 0, 0.3); 
+    
+    /* Apply the frosted glass effect */
+    backdrop-filter: blur(8px);
+    
+    /* Layout properties */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    
+    /* Shape and spacing */
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    
+    /* Link and text styling */
+    text-decoration: none;
+    color: #fff; /* Bright white text against the dark rain background */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
+    
+    /* Hover effect */
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02); /* Slight scale for a dynamic feel */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    background-color:  rgba(32, 49, 32, 0.705) /* Slightly less transparent on hover */
+}
+
+.project-image {
+    width: 250px; /* Make the image slightly larger */
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0; /* Ensures image maintains its size */
+    object-fit: cover;
+    border: 3px solid  rgba(32, 49, 32, 0.705); /* Border around image */
+}
+
+.project-info h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ccffcc; /* Light green title */
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #e0e0e0;
 }
