@@ -213,7 +213,7 @@ footer {
 .project-card:hover {
     transform: scale(1.02); /* Slight scale for a dynamic feel */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    background-color:  rgba(32, 49, 32, 0.705) /* Slightly less transparent on hover */
+    background-color:  rgba(32, 49, 32, 0.705) /* Slightly less transparent on hover */
 }
 
 .project-image {
@@ -222,7 +222,7 @@ footer {
     border-radius: 8px;
     flex-shrink: 0; /* Ensures image maintains its size */
     object-fit: cover;
-    border: 3px solid  rgba(32, 49, 32, 0.705); /* Border around image */
+    border: 3px solid  rgba(32, 49, 32, 0.705); /* Border around image */
 }
 
 .project-info h3 {
